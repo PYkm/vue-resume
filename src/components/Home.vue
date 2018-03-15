@@ -47,8 +47,7 @@ p{
   color: #fff;
   font-weight:300;
   font-size:3em;
-  text-align: left;
-  padding:100px 300px;
+  text-align: center;
 }
 
 </style>
