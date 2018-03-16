@@ -3,6 +3,8 @@
     <!--<a name="Home" href="#Home">Home</a>-->
     <div class="home">
       <p>Jennifer<br>Chan</p>
+      <h2>A Web Front End Developer</h2>
+      <h2>-------------------------</h2>
     </div>
   </div>
 </template>
@@ -22,32 +24,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
 #Home{
   background-color: #42b983;
   height:400px;
   width:100%;
 }
 
-p{
+.home{
+  float: left;
+  text-align: right;
+  width: 50%;
+  height:100%;
   color: #fff;
+}
+
+p{
   font-weight:300;
   font-size:3em;
-  text-align: center;
+  margin:15% 0 10%;
+}
+
+h2{
+  font-weight:100;
 }
 
 </style>

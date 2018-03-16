@@ -41,8 +41,8 @@ li {
   margin: 10px 10px;
 }
 a {
+  font-size:1em;
   color: #fff;
-  text-decoration: none;
   text-transform: uppercase;
 }
 

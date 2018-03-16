@@ -1,12 +1,11 @@
 <template>
   <div id="Contact">
-    <a name="Contact" href="#Contact">Contact</a>
-    <span class="icon-location2"></span>Shanghai
-    <span class="icon-mobile"></span>+86 188 cccc cccc
-    <span class="icon-envelop"></span>xxx@xxx.com
-    <span class="icon-earth"></span>https://xxx//xxx
-
-
+    <a name="Contact" href="#Contact">Contacts</a>
+    <div class="infos">
+  <div class="info" v-for="info in infos">
+      <span :class="'icon-'+info.text[0]"> </span>{{info.text[1]}}
+    </div>
+  </div>
   </div>
 </template>
 
@@ -16,28 +15,36 @@ export default {
   name: 'Contact',
   data () {
     return {
-
-      
+      infos:[
+        {text: ['location2','Shanghai']},
+        {text: ['mobile','+86 188 cccc cccc']},
+        {text: ['envelop','xxx@xxx.com']},
+        {text: ['earth','https://xxx//xxx']}
+      ]
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@import "static/fonts/style.css"
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+a 
   color: #42b983;
-}
+
+#Contact
+  margin:5% 10%;
+  height:130px;
+
+.infos
+  padding:10px; 
+
+.info
+  width:50%;
+  float:left;
+  text-align:left;
+  padding:10px 0;
+
+
+
+
 </style>
