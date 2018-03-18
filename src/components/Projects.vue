@@ -2,7 +2,7 @@
   <div id="Projects">
     <a name="Projects" href="#Projects">Projects</a>
     <div class="">
-      <h1>SF projects</h1>
+      <h1>Projects 1</h1>
       <p>.................................................</p>
     </div>
   </div>
@@ -15,7 +15,7 @@ export default {
   data () {
     return {
 
-      
+
     }
   }
 }

@@ -3,7 +3,7 @@
     <a name="Contact" href="#Contact">Contacts</a>
     <div class="infos">
   <div class="info" v-for="info in infos">
-      <span :class="'icon-'+info.text[0]"> </span>{{info.text[1]}}
+    <span :class="'icon-'+info.text[0]"></span> {{info.text[1]}}
     </div>
   </div>
   </div>
@@ -19,7 +19,7 @@ export default {
         {text: ['location2','Shanghai']},
         {text: ['mobile','+86 188 cccc cccc']},
         {text: ['envelop','xxx@xxx.com']},
-        {text: ['earth','https://xxx//xxx']}
+        {text: ['earth','https://xxx//xxx.com']}
       ]
     }
   }
@@ -28,7 +28,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-a 
+div
+  font-size: 18px;
+
+a
   color: #42b983;
 
 #Contact
@@ -36,7 +39,7 @@ a
   height:130px;
 
 .infos
-  padding:10px; 
+  padding:10px;
 
 .info
   width:50%;

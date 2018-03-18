@@ -25,12 +25,12 @@ export default {
       'imgBlk': 'imgBlk' === 'imgBlk_left' ? 'imgBlk_right' : 'imgBlk_left',
       'content': 'content' === 'content_left' ? 'content_right' : 'content_left',
       photos: [
-        {url: 'static/logo/seedory.jpg',content:`He`},
-        {url: 'static/logo/lsr.jpg',content:'sHe'},
-        {url: 'static/logo/zwcad.jpg',content:'sdfsdfHe'}
+        {url: 'static/logo/seedory.jpg',content: `Seedory`},
+        {url: 'static/logo/lsr.jpg',content: 'Lightspeed Research'},
+        {url: 'static/logo/zwcad.jpg',content: 'ZW CAD'}
 
       ]
-      
+
     }
   }
 }
@@ -40,11 +40,12 @@ export default {
 <style scoped>
 #Work{
   margin:5% 10%;
-  height:930px;
+  height:810px;
 }
 
 .container{
-  height:100%;
+  /*height:100%;*/
+  margin-top:30px;
   overflow: hidden;
 }
 
@@ -71,7 +72,7 @@ img{
   /*width:50%;*/
   height:100%;
   position: relative;
-  
+
 }
 
 .content_left{

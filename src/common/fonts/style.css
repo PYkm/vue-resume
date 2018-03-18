@@ -33,6 +33,9 @@
 .icon-envelop:before {
   content: "\e945";
 }
+.icon-location:before {
+  content: "\e947";
+}
 .icon-location2:before {
   content: "\e948";
 }
@@ -42,8 +45,23 @@
 .icon-mobile:before {
   content: "\e958";
 }
+.icon-mobile2:before {
+  content: "\e959";
+}
+.icon-spinner:before {
+  content: "\e97a";
+}
+.icon-spinner3:before {
+  content: "\e97c";
+}
 .icon-spinner6:before {
   content: "\e97f";
+}
+.icon-spinner9:before {
+  content: "\e982";
+}
+.icon-spinner10:before {
+  content: "\e983";
 }
 .icon-enlarge2:before {
   content: "\e98b";
@@ -53,6 +71,42 @@
 }
 .icon-earth:before {
   content: "\e9ca";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkmark2:before {
+  content: "\ea11";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-radio-checked:before {
+  content: "\ea54";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-mail2:before {
+  content: "\ea84";
 }
 .icon-sina-weibo:before {
   content: "\ea9a";

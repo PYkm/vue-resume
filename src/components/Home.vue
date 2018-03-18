@@ -16,7 +16,7 @@ export default {
   data () {
     return {
 
-      
+
     }
   }
 }
@@ -28,6 +28,7 @@ export default {
   background-color: #42b983;
   height:400px;
   width:100%;
+  padding-top: 58px;
 }
 
 .home{

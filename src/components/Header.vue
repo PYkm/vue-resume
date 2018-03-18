@@ -2,7 +2,7 @@
   <div id="nav">
     <ul>
       <li v-for="nav in navs">
-        <a :href="'#' + nav.name">{{ nav.name }} </a>       
+        <a :href="'#' + nav.name">{{ nav.name }} </a>
       </li>
     </ul>
   </div>
@@ -21,7 +21,7 @@ export default {
       {name: 'Projects'},
       {name: 'Contact'},
     ]
-      
+
     }
   }
 }
@@ -47,7 +47,10 @@ a {
 }
 
 #nav{
+  width:100%;
   background-color: #42b983;
-  
+  position:fixed;
+  z-index: 999;
+  /*top:0px;*/
 }
 </style>

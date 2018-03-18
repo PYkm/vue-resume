@@ -7,14 +7,23 @@
 
     <div class="col col_left">
       <h2>I like to: </h2>
-      <h3 v-for="hobby in hobbies">{{hobby.name}}</h3>
+      <div class="hobbies" v-for="hobby in hobbies">
+        <h3 class="icon-checkmark2"> {{hobby.name}}</h3>
+      </div>
     </div>
 
     <div class="col col_right" id="skills">
       <h2>My Skills: </h2>
-      <div v-for="skill in skills">
-      <h3>{{skill.name}}</h3>
-      <progress title="90" value="90" max="100"></progress>
+      <div class="skill" v-for="skill in skills">
+        <div class="skillName">
+          <h3>{{skill.name}}</h3>
+        </div>
+      <!--<progress title="90" value="90" max="100"></progress>-->
+        <div class="outer">
+          <div class="inner">
+
+          </div>
+        </div>
     </div>
     </div>
   </div>
@@ -30,8 +39,8 @@ export default {
         {name: 'read novels'},
         {name: 'watch movies'},
         {name: 'listen musics'},
-        {name: 'skating'},
-        {name: 'Vue.js'}
+        {name: 'go skating'},
+        {name: 'watch American TV series'}
 
       ],
       skills:[
@@ -41,7 +50,7 @@ export default {
         {name: 'PhotoShop'},
         {name: 'Vue.js'}
       ]
-      
+
     }
   }
 }
@@ -54,8 +63,53 @@ export default {
   height:400px;
 }
 
+.hobbies{
+  margin-bottom: 20px;
+}
 
-h2, h3{
+.skill{
+  height:18px;
+  width:100%;
+  margin-bottom: 20px;
+}
+
+.outer{
+  width: 70%;
+  height: 90%;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  float: right;
+  margin-top:-20px;
+}
+
+.inner{
+  width: 0;
+  height: 100%;
+  background: #ffcd33;
+  animation: loading 3s linear 1 forwards;
+}
+
+@keyframes loading {
+  from{
+    width:0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.skillName{
+  /*float: left;*/
+  width:30%;
+  height:100%;
+}
+
+h3{
+  font-weight:100;
+}
+
+h2{
   margin-bottom: 20px;
   font-weight:100;
 }
@@ -75,7 +129,7 @@ p{
 
 .col{
   width:50%;
-  height:100%;
+  height:58%;
   text-align: left;
 }
 
