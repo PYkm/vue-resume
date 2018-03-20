@@ -29,6 +29,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+@media screen and (max-width: 900px){
+  #nav{
+    display:none;
+  }
+}
+
+@media screen and (min-width: 900px){
+  #nav{
+    display:block;
+  }
+}
+
+
+
 h1, h2 {
   font-weight: normal;
 }
@@ -51,6 +66,16 @@ a {
   background-color: #42b983;
   position:fixed;
   z-index: 999;
+  box-shadow: 0 0 2px rgba(0,0,0,0.25);
   /*top:0px;*/
 }
+
+#mobile_nav{
+  width:100%;
+  background-color: #42b983;
+  position:fixed;
+  z-index: 999;
+  box-shadow: 0 0 2px rgba(0,0,0,0.25);
+}
+
 </style>

@@ -18,8 +18,9 @@
 
 export default {
   name: 'Work',
-  'imgBlk': 'imgBlk_left',
-  'content': 'content_left',
+  imgBlk: 'imgBlk_left',
+  content: 'content_left',
+  isLeft: true,
   data () {
     return {
       'imgBlk': 'imgBlk' === 'imgBlk_left' ? 'imgBlk_right' : 'imgBlk_left',
@@ -38,9 +39,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media screen and (max-width: 900px){
+#Work{
+  height:auto;
+}
+}
+
+
+@media screen and (min-width: 900px){
+#Work{
+  height:810px;
+}
+}
+
 #Work{
   margin:5% 10%;
-  height:810px;
 }
 
 .container{
@@ -51,7 +64,7 @@ export default {
 
 .image{
   overflow:hidden;
-  height:250px;
+
 }
 
 .imgBlk_left{
@@ -69,8 +82,10 @@ export default {
 }
 
 img{
-  /*width:50%;*/
+  width:100%;
   height:100%;
+  max-height:250px;
+  max-width:250px;
   position: relative;
 
 }

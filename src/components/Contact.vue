@@ -37,16 +37,29 @@ a
 #Contact
   margin:5% 10%;
   height:130px;
+  margin-bottom: 0;
 
 .infos
   padding:10px;
 
 .info
-  width:50%;
   float:left;
-  text-align:left;
   padding:10px 0;
 
+@media screen and (min-width: 500px)
+  .info
+    width:50%;
+    text-align:left;
+
+
+@media screen and (max-width: 500px)
+  .info
+    width:100%;
+    text-align:center;
+  .infos
+    height: 168px;
+  #Contact
+    height:auto;
 
 
 

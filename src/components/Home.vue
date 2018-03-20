@@ -24,29 +24,43 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+@media screen and (max-width: 900px){
+#Home{
+  padding-top: 40px;
+}
+}
+
+@media screen and (min-width: 900px){
+#Home{
+  padding-top: 58px;
+}
+
+}
+
 #Home{
   background-color: #42b983;
-  height:400px;
   width:100%;
-  padding-top: 58px;
+  height:350px;
 }
 
 .home{
   float: left;
   text-align: right;
-  width: 50%;
   height:100%;
+  width:90%;
   color: #fff;
 }
 
 p{
   font-weight:300;
   font-size:3em;
-  margin:15% 0 10%;
+  margin:70px 0 30px;
 }
 
 h2{
   font-weight:100;
 }
+
 
 </style>

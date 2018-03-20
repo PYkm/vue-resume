@@ -1,6 +1,7 @@
 <template>
   <div id="All">
     <v-header></v-header>
+    <v-nav></v-nav>
     <home></home>
     <about></about>
     <work></work>
@@ -12,6 +13,7 @@
 
 <script>
 import header from '@/components/Header'
+import nav from '@/components/MobileNav'
 import home from '@/components/Home'
 import about from '@/components/About'
 import projects from '@/components/Projects'
@@ -27,6 +29,7 @@ export default {
   },
   components: {
     'v-header': header,
+    'v-nav': nav,
     'home': home,
     'about': about,
     'projects': projects,

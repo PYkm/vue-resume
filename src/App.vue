@@ -32,6 +32,5 @@ a
   text-decoration: none;
   font-size:1.5em;
   color: #42b983;
-
-
+  
 </style>
