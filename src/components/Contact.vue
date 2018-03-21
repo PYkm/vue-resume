@@ -43,19 +43,26 @@ a
   padding:10px;
 
 .info
-  float:left;
   padding:10px 0;
 
-@media screen and (min-width: 500px)
+
+
+@media screen and (min-width: 900px)
+  .info
+    margin:10px;
+    display:inline-block;
+
+@media screen and (min-width: 500px) and (max-width: 900px)
   .info
     width:50%;
-    text-align:left;
+    float:left;
 
 
 @media screen and (max-width: 500px)
   .info
     width:100%;
     text-align:center;
+    float:left;
   .infos
     height: 168px;
   #Contact
