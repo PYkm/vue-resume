@@ -5,8 +5,8 @@
       <!--<img @click src="static/projects/SF-Express.jpg"/>
       <img src="static/projects/Lightspeed.jpg"/>
       <img src="static/projects/2nd-OPPO-Mobile-Theme-Contest.JPG"/>-->
-        <img @click="showDetail(project)" :src="'static/projects/'+project.src"/>
-        <div class="mask">
+        <img @click="showDetail" :src="'static/projects/'+project.src"/>
+        <div class="mask" :class="status + 'It'">
         <div v-show="true" :id="'project' + project.cid">
           <h2>{{project.name}}</h2>
           <h3>{{project.duration}}</h3>
@@ -31,6 +31,7 @@ export default {
   name: 'Projects',
   data () {
     return {
+      status: 'hide',
       projects: [
       { cid:3, 
         src:'SF-Express.jpg', 
@@ -80,8 +81,8 @@ export default {
     }
   },
   methods: {
-    showDetail: function(project){
-      
+    showDetail: function(){      
+      this.status = 'projectCid';
     }
   }
 }
@@ -92,6 +93,13 @@ export default {
 #Projects{
   margin:5% 10%;
   /*height:400px;*/
+}
+
+.hideIt{
+  display: none;
+}
+.showIt{
+  display: block;
 }
 
 .mask{
