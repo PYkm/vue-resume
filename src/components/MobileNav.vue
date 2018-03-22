@@ -4,6 +4,7 @@
     <a class="menu_button" @click="toggleMenuList"></a>
     <a class="logo" href="/_"></a>
     <!--</div>-->
+  <transition name="fade">
     <div class="list" v-show="list">
     <ul>
       <li v-for="nav in navs">
@@ -11,6 +12,7 @@
       </li>
     </ul>
   </div>
+  </transition>
   </div>
 </template>
 
@@ -49,6 +51,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 @media screen and (max-width: 900px){
   #mobile_nav{
     display:block;

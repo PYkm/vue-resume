@@ -1,6 +1,6 @@
 <template>
   <div id="Contact">
-    <a name="Contact" href="#Contact">Contacts</a>
+    <a href="#Contact">Contacts</a>
     <div class="infos">
   <div class="info" v-for="info in infos">
     <span :class="'icon-'+info.text[0]"></span> {{info.text[1]}}

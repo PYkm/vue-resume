@@ -1,6 +1,6 @@
 <template>
   <div id="Work">
-    <a name="Work" href="#Work">Work</a>
+    <a href="#Work">Work</a>
     <div class="container">
       <div v-for="photo in photos" class="image">
         <!--<div class="block" :class="imgBlk">-->

@@ -1,6 +1,6 @@
 <template>
   <div id="Projects">
-    <a name="Projects" href="#Projects">Projects</a>
+    <a href="#Projects">Projects</a>
     <div id="projectBlk">
       <div class="project" v-for="project in projects">
         <img @click="showDetail(project.cid)" :src="'static/projects/'+project.src"/>
@@ -98,7 +98,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 @media screen and (max-width: 800px){
 .content{
   border-bottom: 1px solid #cdcecf;
@@ -232,9 +231,9 @@ img{
 }
 
 img:hover{
-  filter:alpha(Opacity=80);
-  -moz-opacity:0.8;
-  opacity: 0.8;
+  filter:alpha(Opacity=50);
+  -moz-opacity:0.5;
+  opacity: 0.5;
   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
 } 
 

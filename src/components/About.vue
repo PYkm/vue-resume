@@ -1,6 +1,6 @@
 <template>
   <div id="About">
-    <a name="About" href="#About">About</a>
+    <a href="#About">About</a>
     <div class="intro">
       <p>Hi, I'm Jennifer Chan from China, after finished 4 years long undergraduate study and got a bachelor's degree in Computer Science and Technology from SIT at 2015. I have been working as a web designer, front-end developer almost 3 years based in Shanghai.</p>
     </div>
