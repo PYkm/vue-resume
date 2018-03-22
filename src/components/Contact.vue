@@ -18,8 +18,8 @@ export default {
       infos:[
         {text: ['location2','Shanghai']},
         {text: ['mobile','+86 188 cccc cccc']},
-        {text: ['envelop','xxx@xxx.com']},
-        {text: ['earth','https://xxx//xxx.com']}
+        {text: ['envelop','jennifer.chan3@hotmail.com']},
+        {text: ['earth','https://pykm.github.io/']}
       ]
     }
   }
@@ -47,18 +47,18 @@ a
 
 
 
-@media screen and (min-width: 900px)
+@media screen and (min-width: 1040px)
   .info
     margin:10px;
     display:inline-block;
 
-@media screen and (min-width: 500px) and (max-width: 900px)
+@media screen and (min-width: 670px) and (max-width: 1040px)
   .info
     width:50%;
     float:left;
 
 
-@media screen and (max-width: 500px)
+@media screen and (max-width: 670px)
   .info
     width:100%;
     text-align:center;

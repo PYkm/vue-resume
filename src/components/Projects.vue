@@ -1,26 +1,31 @@
 <template>
   <div id="Projects">
     <a name="Projects" href="#Projects">Projects</a>
-    <div class="project" v-for="project in projects">
-      <!--<img @click src="static/projects/SF-Express.jpg"/>
-      <img src="static/projects/Lightspeed.jpg"/>
-      <img src="static/projects/2nd-OPPO-Mobile-Theme-Contest.JPG"/>-->
-        <img @click="showDetail" :src="'static/projects/'+project.src"/>
-        <div class="mask" :class="status + 'It'">
-        <div v-show="true" :id="'project' + project.cid">
-          <h2>{{project.name}}</h2>
-          <h3>{{project.duration}}</h3>
-          <p>{{project.content}}</p>
-          <ol>
-            <li v-for="list in project.lists">{{list}}</li>
-          </ol>
-          <p class="">{{project.description}}</p>
+    <div id="projectBlk">
+      <div class="project" v-for="project in projects">
+        <img @click="showDetail(project.cid)" :src="'static/projects/'+project.src"/>
+        <div class="mask" :class="{hideIt : activeCid != project.cid || activeCid == ''}">
+        <div class="projectDetail" v-show="true" :id="'project' + project.cid">
+          <a class="close_button icon-shrink2" @click="HideDetail()"></a>
+          <div class="title">
+            <h2>{{project.name}}</h2>
+            <h3>{{project.duration}}</h3>
+          </div>
+          <div class="detail">
+            <div class="content">
+              <p>{{project.content}}</p>
+              <ol>
+                <li v-for="list in project.lists">{{list}}</li>
+              </ol>
+              <p>URL: {{project.url}}</p>
+            </div>
+            <div class="description">
+              <p>{{project.description}}</p>
+            </div>
+          </div>
         </div>
         </div>
-      <!--
-      <h1>Projects 1</h1>
-      <p>.................................................</p>
-      -->
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +36,7 @@ export default {
   name: 'Projects',
   data () {
     return {
-      status: 'hide',
+      activeCid: '',
       projects: [
       { cid:3, 
         src:'SF-Express.jpg', 
@@ -81,18 +86,73 @@ export default {
     }
   },
   methods: {
-    showDetail: function(){      
-      this.status = 'projectCid';
-    }
+    showDetail: function(projectCid){
+      this.activeCid = projectCid;
+    },
+    HideDetail: function(){  
+      this.activeCid = '';   
+    },
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+@media screen and (max-width: 800px){
+.content{
+  border-bottom: 1px solid #cdcecf;
+  width:100%;
+}
+.description{
+  width:100%;
+  margin-top:15px;
+}
+
+}
+
+@media screen and (min-width: 800px){
+.content{
+  float: left;
+  border-right: 1px solid #cdcecf;
+  width:66%;
+  padding-right:15px;
+}
+.description{
+  float: right;
+  width:29%;
+  margin-left:15px;
+}
+
+
+}
+
+
 #Projects{
   margin:5% 10%;
   /*height:400px;*/
+}
+#projectBlk{
+  margin-top: 30px;
+
+}
+
+.title{
+  margin-bottom: 30px !important;
+  color:#000;
+}
+
+.detail{
+  width:100%;
+  color:#6f6f6f;
+}
+
+a.close_button{
+    float: right;
+    width: 24px;
+    height: 24px;
+    /*background: url(../assets/menu.png) center center no-repeat;
+    background-size: 24px;*/
 }
 
 .hideIt{
@@ -121,9 +181,10 @@ export default {
 .project{
   width:100%;
   text-align: left;
+    height:auto;
 }
 
-.mask div{
+.projectDetail{
   width:80%;
   background: #fff;
   height: auto;
@@ -149,13 +210,21 @@ export default {
 
 
 .project p{
-  font-size: 1.05em;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  /* word-break: break-all; */
+  /* overflow: hidden; */
 }
 
 
 ol li{
   list-style-position: inside;
   font-size: 1em;
+}
+
+ol{
+  margin-bottom: 20px;
 }
 
 img{
