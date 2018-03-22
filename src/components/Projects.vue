@@ -98,6 +98,36 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/*
+@media screen and (max-height: 400px){
+.projectDetail{
+      max-height: 350px;
+      overflow: scroll;
+}
+}
+
+@media screen and (min-height: 400px) and (max-height: 500px){
+.projectDetail{
+      max-height: 400px;
+      overflow: scroll;
+}
+}
+
+@media screen and (min-height: 500px) and (max-height: 600px){
+.projectDetail{
+      max-height: 500px;
+      overflow: scroll;
+}
+}
+
+@media screen and (min-height: 600px) and (max-height: 700px){
+.projectDetail{
+      max-height: 600px;
+      overflow: scroll;
+}
+}
+*/
+
 @media screen and (max-width: 800px){
 .content{
   border-bottom: 1px solid #cdcecf;
@@ -195,6 +225,8 @@ a.close_button{
   padding: 30px;
   margin: 0 auto;
   transform: translate3d(0,-50%,0);
+  max-height: 80%;
+  overflow-y:scroll;
 }
 
 
