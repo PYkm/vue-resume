@@ -7,7 +7,7 @@
   <transition name="fade">
     <div class="list" v-show="list">
     <ul>
-      <li v-for="nav in navs">
+      <li v-for="(nav,index) in navs" :key="index">
         <a @click="toggleClass(nav.name)" :class="{actived: activeName == nav.name}" :href="'#' + nav.name">{{ nav.name }} </a>
       </li>
     </ul>

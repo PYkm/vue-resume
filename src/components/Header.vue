@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <ul>
-      <li v-for="nav in navs">
+      <li v-for="(nav,index) in navs" :key="index">
         <a :href="'#' + nav.name">{{ nav.name }} </a>
       </li>
     </ul>

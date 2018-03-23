@@ -2,7 +2,7 @@
   <div id="Contact">
     <a href="#Contact">Contacts</a>
     <div class="infos">
-  <div class="info" v-for="info in infos">
+  <div class="info" v-for="(info,index) in infos" :key="index">
     <span :class="'icon-'+info.text[0]"></span> {{info.text[1]}}
     </div>
   </div>

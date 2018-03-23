@@ -2,7 +2,7 @@
   <div id="Projects">
     <a href="#Projects">Projects</a>
     <div id="projectBlk">
-      <div class="project" v-for="project in projects">
+      <div class="project" v-for="project in projects" :key="project.cid">
         <img @click="showDetail(project.cid)" :src="'static/projects/'+project.src"/>
         <div class="mask" :class="{hideIt : activeCid != project.cid || activeCid == ''}">
         <div class="projectDetail" v-show="true" :id="'project' + project.cid">
@@ -15,7 +15,7 @@
             <div class="content">
               <p>{{project.content}}</p>
               <ol>
-                <li v-for="list in project.lists">{{list}}</li>
+                <li v-for="(list,index) in project.lists" :key="index">{{list}}</li>
               </ol>
               <p>URL: {{project.url}}</p>
             </div>
@@ -128,7 +128,7 @@ export default {
 }
 */
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 820px){
 .content{
   border-bottom: 1px solid #cdcecf;
   width:100%;
@@ -140,7 +140,7 @@ export default {
 
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 820px){
 .content{
   float: left;
   border-right: 1px solid #cdcecf;

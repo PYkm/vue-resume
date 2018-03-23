@@ -7,14 +7,14 @@
 
     <div class="col col_left">
       <h2>I like to: </h2>
-      <div class="hobbies" v-for="hobby in hobbies">
+      <div class="hobbies" v-for="(hobby,index) in hobbies" :key="index">
         <span class="icon-checkmark2"></span> {{hobby.name}}
       </div>
     </div>
 
     <div class="col col_right" id="skills">
       <h2>My Skills: </h2>
-      <div class="skill" v-for="skill in skills">
+      <div class="skill" v-for="(skill,index) in skills" :key="index">
         <div class="skillName">
           <h3>{{skill.name}}</h3>
         </div>
@@ -85,7 +85,7 @@ h3{
 
 @media screen and (min-width: 900px){
 #About{
-  height:400px;
+  height:410px;
 }
 p{
   font-size:1.35em;
