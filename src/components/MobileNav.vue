@@ -31,7 +31,7 @@ export default {
       {name: 'Contact'},
     ],
     list: this.list,
-    activeName: 'Home',
+    activeName: this.$route.path.slice(1,),
     vheight: 40
     }
   },

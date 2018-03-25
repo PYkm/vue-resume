@@ -2,7 +2,7 @@
   <div id="nav">
     <ul>
       <li v-for="(nav,index) in navs" :key="index">
-        <a :href="'#' + nav.name">{{ nav.name }} </a>
+        <a @click="toggleClass(nav.name)" :class="{actived: activeName == nav.name}" :href="'#' + nav.name">{{ nav.name }} </a>
       </li>
     </ul>
   </div>
@@ -20,8 +20,15 @@ export default {
       {name: 'Work'},
       {name: 'Projects'},
       {name: 'Contact'},
-    ]
+    ],
+    activeName: this.$route.path.slice(1,),
+    path: this.$route.path
 
+    }
+  },
+  methods: {
+    toggleClass: function(navName){
+      this.activeName = navName;
     }
   }
 }
@@ -42,7 +49,10 @@ export default {
   }
 }
 
-
+li a:hover, .actived{
+    /*border-bottom: 2px solid #f3f3f3;*/
+    color:#000;
+}
 
 h1, h2 {
   font-weight: normal;

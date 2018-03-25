@@ -7,7 +7,7 @@
     <work></work>
     <projects></projects>
     <contact></contact>
-    </div>
+  </div>
 </template>
 
 
