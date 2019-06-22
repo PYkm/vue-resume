@@ -1,9 +1,9 @@
 <template>
-  <div id="Projects">
-    <a href="#Projects">Projects</a>
+  <div :id="$t('navs[3].name')" class="Projects">
+    <a :href="'#' + $t('navs[3].name')">{{ $t('navs[3].name') }}</a>
     <div id="projectBlk">
-      <div class="project" v-for="project in projects" :key="project.cid">
-        <img @click="showDetail(project.cid)" :src="'static/projects/'+project.src"/>
+      <div class="project" v-for="project in $t('projects')" :key="project.cid">
+        <img @click="showDetail(project.cid)" :src="'static/projects/'+project.src" :alt="project.name"/>
         <div class="mask" :class="{hideIt : activeCid != project.cid || activeCid == ''}">
         <div class="projectDetail" v-show="true" :id="'project' + project.cid">
           <a class="close_button icon-shrink2" @click="HideDetail()"></a>
@@ -37,6 +37,7 @@ export default {
   data () {
     return {
       activeCid: '',
+      /*
       projects: [
       { cid:3, 
         src:'SF-Express.jpg', 
@@ -82,7 +83,7 @@ export default {
       }
 
       ]
-
+*/
     }
   },
   methods: {
@@ -157,7 +158,7 @@ export default {
 }
 
 
-#Projects{
+.Projects{
   margin:5% 10%;
   /*height:400px;*/
 }
@@ -267,6 +268,7 @@ img:hover{
   -moz-opacity:0.5;
   opacity: 0.5;
   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+  cursor: pointer;
 } 
 
 </style>

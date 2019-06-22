@@ -2,7 +2,7 @@
   "name": "vue-resume",
   "version": "1.0.0",
   "description": "Resume in Vue",
-  "author": "PYkm tingbao817@163.com",
+  "author": "PYkm  jennifer.chan3@hotmail.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-i18n": "^8.11.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

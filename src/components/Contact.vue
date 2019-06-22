@@ -1,14 +1,14 @@
 <template>
-  <div id="Contact">
-    <a href="#Contact">Contacts</a>
+  <div :id="$t('navs[4].name')">
+    <a :href="'#' + $t('navs[4].name')">{{ $t('navs[4].name') }}</a>
     <div class="infos">
-  <div class="info" v-for="(info,index) in infos" :key="index">
+  <div class="info" v-for="(info,index) in $t('contact.infos')" :key="index">
     <span :class="'icon-'+info.text[0]"></span> {{info.text[1]}}
     </div>
   </div>
   </div>
 </template>
-
+<!-- 
 <script>
 
 export default {
@@ -25,7 +25,7 @@ export default {
   }
 }
 </script>
-
+-->
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 div

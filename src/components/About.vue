@@ -1,20 +1,20 @@
 <template>
-  <div id="About">
-    <a href="#About">About</a>
+  <div :id="$t('navs[1].name')" class="About">
+    <a :href="'#'+$t('navs[1].name')">{{ $t('navs[1].name') }}</a>
     <div class="intro">
-      <p>Hi, I'm Jennifer Chan from China, after finished 4 years long undergraduate study and got a bachelor's degree in Computer Science and Technology from SIT at 2015. I have been working as a web designer, front-end developer almost 3 years based in Shanghai.</p>
+      <p>{{ $t('about.intro') }}</p>
     </div>
 
     <div class="col col_left">
-      <h2>I like to: </h2>
-      <div class="hobbies" v-for="(hobby,index) in hobbies" :key="index">
+      <h2>{{ $t('about.like') }}</h2>
+      <div class="hobbies" v-for="(hobby,index) in $t('about.hobbies')" :key="index">
         <span class="icon-checkmark2"></span> {{hobby.name}}
       </div>
     </div>
 
     <div class="col col_right" id="skills">
-      <h2>My Skills: </h2>
-      <div class="skill" v-for="(skill,index) in skills" :key="index">
+      <h2>{{ $t('about.skill') }}</h2>
+      <div class="skill" v-for="(skill,index) in $t('about.skills')" :key="index">
         <div class="skillName">
           <h3>{{skill.name}}</h3>
         </div>
@@ -29,6 +29,7 @@
   </div>
 </template>
 
+<!-- 
 <script>
 
 export default {
@@ -55,12 +56,13 @@ export default {
   }
 }
 </script>
+-->
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 @media screen and (max-width: 900px){
-#About{
+.About{
   height:auto;
 }
 p{
@@ -84,7 +86,7 @@ h3{
 
 
 @media screen and (min-width: 900px){
-#About{
+.About{
   height:410px;
 }
 p{
@@ -100,7 +102,7 @@ p{
 }
 
 
-#About{
+.About{
   margin:5% 10%;
 }
 

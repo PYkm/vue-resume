@@ -2,13 +2,16 @@
   <div id="mobile_nav" :class="'mobile_nav' + vheight">
    <!--<div class="menu">-->
     <a class="menu_button" @click="toggleMenuList"></a>
-    <a class="logo" href="/_"></a>
+    <a class="logo" :href="'#' + $t('navs[0].name')"></a>
     <!--</div>-->
   <transition name="fade">
     <div class="list" v-show="list">
     <ul>
-      <li v-for="(nav,index) in navs" :key="index">
+      <li v-for="(nav,index) in $t('navs')" :key="index">
         <a @click="toggleClass(nav.name)" :class="{actived: activeName == nav.name}" :href="'#' + nav.name">{{ nav.name }} </a>
+      </li>
+      <li>
+        <a @click="toggleLang($t('toggleLang'))">{{$t('toggleLang')}}</a>
       </li>
     </ul>
   </div>
@@ -23,13 +26,13 @@ export default {
   list: false,
   data () {
     return {
-    navs: [
+    /*navs: [
       {name: 'Home'},
       {name: 'About'},
       {name: 'Work'},
       {name: 'Projects'},
       {name: 'Contact'},
-    ],
+    ],*/
     list: this.list,
     activeName: this.$route.path.slice(1,),
     vheight: 40
@@ -44,6 +47,15 @@ export default {
       this.list = !this.list;
       this.vheight = 40;
       this.activeName = navName;
+    },
+    toggleLang: function(lan) {
+      if (lan == 'English'){
+        this.$i18n.locale = 'en';
+      }else{
+        this.$i18n.locale = 'zh';
+      }
+      this.list = !this.list;
+      this.vheight = 40;
     }
   }
 }
@@ -106,8 +118,6 @@ export default {
   position:fixed;
   z-index: 999;
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
-
-
 }
 
 #mobile_nav .menu_button{
@@ -118,7 +128,6 @@ export default {
     left: 12px;
     background: url(../assets/menu.png) center center no-repeat;
     background-size: 24px;
-
 }
 
 li a:hover, .actived{

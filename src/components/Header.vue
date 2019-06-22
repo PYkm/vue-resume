@@ -1,8 +1,11 @@
 <template>
   <div id="nav">
     <ul>
-      <li v-for="(nav,index) in navs" :key="index">
+      <li v-for="(nav,index) in $t('navs')" :key="index">
         <a @click="toggleClass(nav.name)" :class="{actived: activeName == nav.name}" :href="'#' + nav.name">{{ nav.name }} </a>
+      </li>
+      <li>
+        <a @click="toggleLang($t('toggleLang'))">{{$t('toggleLang')}}</a>
       </li>
     </ul>
   </div>
@@ -19,7 +22,7 @@ export default {
       {name: 'About'},
       {name: 'Work'},
       {name: 'Projects'},
-      {name: 'Contact'},
+      {name: 'Contact'}
     ],
     activeName: this.$route.path.slice(1,),
     path: this.$route.path
@@ -29,6 +32,13 @@ export default {
   methods: {
     toggleClass: function(navName){
       this.activeName = navName;
+    },
+    toggleLang: function(lan) {
+      if (lan == 'English'){
+        this.$i18n.locale = 'en';
+      }else{
+        this.$i18n.locale = 'zh';
+      }
     }
   }
 }
@@ -51,7 +61,9 @@ export default {
 
 li a:hover, .actived{
     /*border-bottom: 2px solid #f3f3f3;*/
-    color:#000;
+   /* color:#000;*/
+    border-bottom: 2px solid #f6f5f5;
+    cursor:pointer;
 }
 
 h1, h2 {
@@ -69,6 +81,7 @@ a {
   font-size:1em;
   color: #fff;
   text-transform: uppercase;
+  padding-bottom: 4px;
 }
 
 #nav{

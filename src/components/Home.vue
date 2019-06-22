@@ -1,9 +1,9 @@
 <template>
-  <div id="Home">
+  <div :id="$t('navs[0].name')" class="Home">
     <!--<a name="Home" href="#Home">Home</a>-->
     <div class="home">
       <p>Jennifer<br>Chan</p>
-      <h2>A Web Front End Developer</h2>
+      <h2>{{$t('home.me')}}</h2>
       <h2>-------------------------</h2>
     </div>
   </div>
@@ -26,19 +26,19 @@ export default {
 <style scoped>
 
 @media screen and (max-width: 900px){
-#Home{
+.Home{
   padding-top: 40px;
 }
 }
 
 @media screen and (min-width: 900px){
-#Home{
+.Home{
   padding-top: 58px;
 }
 
 }
 
-#Home{
+.Home{
   background-color: #42b983;
   width:100%;
   height:350px;

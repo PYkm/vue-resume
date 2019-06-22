@@ -4,6 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueRouter from 'vue-router'
+import VueI18n from 'vue-i18n'//多语言切换
+/*import messages from './language/index'*/ //第二种方法
+
+Vue.use(VueI18n)
+const i18n = new VueI18n({
+  locale: 'zh', // 语言标识
+  messages: {
+    'zh': require('./assets/lang/zh'),
+    'en': require('./assets/lang/en')
+  }
+})
 
 Vue.use(VueRouter)
 
@@ -36,6 +47,7 @@ const routers = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  i18n,
   router,
   routers,
   components: { App },

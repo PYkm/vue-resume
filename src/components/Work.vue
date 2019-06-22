@@ -1,11 +1,11 @@
 <template>
-  <div id="Work">
-    <a href="#Work">Work</a>
+  <div :id="$t('navs[2].name')" class="Work">
+    <a :href="'#' + $t('navs[2].name')">{{ $t('navs[2].name') }}</a>
     <div class="container">
-      <div v-for="photo in photos" class="image">
+      <div v-for="photo in $t('work.photos')" class="image">
         <!--<div class="block" :class="imgBlk">-->
         <div class="block" :class="{imgBlk_left: photo.cid%2, imgBlk_right: photo.cid%2===0}">
-          <img :src="photo.src"/>
+          <img :src="photo.src" :alt="photo.alt"/>
         </div>
         <div class="contents block" :class="content">
           <div class="contentsInner">
@@ -27,14 +27,14 @@ export default {
   data () {
     return {
       'imgBlk': 'imgBlk' === 'imgBlk_left' ? 'imgBlk_right' : 'imgBlk_left',
-      'content': 'content' === 'content_left' ? 'content_right' : 'content_left',
+      'content': 'content' === 'content_left' ? 'content_right' : 'content_left'/*,
       photos: [
         {cid:3, src: 'static/logo/zwcad.jpg',title:`Network Develop Engineer`,duration:`2017/07 -- 2018/04`,content: `ZW-CAD is a CAD leader brand in China, the head office is based in Guangzhou. I worked as a Network Develop Engineer. I'm responsible for building Server, Constructing Website with both Front-end and Back-end and so on. I was participated in projects which is worked for SF-Express.`},
         {cid:2, src: 'static/logo/lsr.jpg',title:`Survey Programmer`,duration:`2015/05 -- 2017/05 `,content: `Lightspeed Research is a company that provide highest-quality online research for clients, the head office is based in London. I worked as a SP for 2 years. I was responsible for providing high-quality Online questionnaire for our clinets, Doing the logic programming and data checking as well.`},
         {cid:1, src: 'static/logo/seedory.jpg',title:`Art Designer(Part-time)`,duration:`2015/03 -- 2015/04`,content: `Seedory is a cosmetics brand. I worked at this company as a Art Designer, I was responsible for taking photos of products, as well as the post processing. And I also maked the images which needs to publish on the Webchat or Taobao everyday. `}
 
       ]
-
+    */
     }
   }
 }
@@ -43,13 +43,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @media screen and (max-width: 900px){
-#Work{
+.Work{
   height:auto;
 }
 }
 
 @media screen and (min-width: 900px){
-#Work{
+.Work{
   height:810px;
 }
 }
@@ -88,7 +88,7 @@ export default {
 }
 
 
-#Work{
+.Work{
   margin:5% 10%;
 }
 
