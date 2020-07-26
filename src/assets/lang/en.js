@@ -11,15 +11,15 @@ module.exports = {
   	me: 'A Web Front End Developer'
   },
   about: {
-	intro: "Hi, I'm Jennifer Chan from China, after finished 4 years long undergraduate study and got a bachelor's degree in Computer Science and Technology from SIT at 2015. I have been working as a web designer, front-end developer almost 3 years based in Shanghai.",
-  	like: 'I like to: ',
+	intro: "Hi, this is TakeAction_行动 from China. After finishing 4-year long undergraduate study and got a bachelor's degree in Computer Science and Technology at 2015, I have been working 5 years in Shanghai.",
+  	like: 'I like: ',
   	skill: 'My Skills: ',
   	hobbies:[
-        {name: 'read novels'},
-        {name: 'watch movies'},
-        {name: 'listen musics'},
-        {name: 'go skating'},
-        {name: 'watch American TV series'}
+        {name: 'reading novels'},
+        {name: 'watching documentaries'},
+        {name: 'listening to music'},
+        {name: 'learning English'},
+        {name: 'watching American TV series'}
     ],
     skills:[
         {name: 'HTML5', score: 80},
@@ -32,9 +32,9 @@ module.exports = {
   contact:{
     infos:[
         {text: ['location2','Shanghai']},
-        {text: ['mobile','+86 188 **** ****']},
-        {text: ['envelop','jennifer.chan3@hotmail.com']},
-        {text: ['earth','https://pykm.github.io/Blog/']}
+        {text: ['mobile','+86 1** **** ****']},
+        {text: ['envelop','TakeActionBiz@hotmail.com']},
+        {text: ['earth','http://taxingdong.com/']}
     ]
   },
   projects: [

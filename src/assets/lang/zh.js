@@ -8,17 +8,17 @@ module.exports = {
     ],
   toggleLang: 'English',
   home:{
-    me: '一名网页前端工程师'
+    me: '网页前端工程师'
   },
   about: {
-  intro: "你好, 欢迎查看我的简历。我是Jennifer Chan，来自中国，现在在上海工作。我是一名网页设计爱好者及开发者，未来的发展方向是前端开发。我2015年毕业于上海应用技术学院，本科攻读计算机科学与技术专业。我已有3年工作经验。",
+  intro: "你好, 欢迎查看我的简历。我是TakeAction_行动，来自中国，现在在上海工作。我是一名网页设计爱好者及开发者。2015年毕业，本科攻读计算机科学与技术专业。",
     like:'我喜欢: ',
     skill:'我的技能: ',
     hobbies:[
         {name: '看小说'},
-        {name: '看电影'},
+        {name: '看纪录片'},
         {name: '听音乐'},
-        {name: '溜冰和跑步'},
+        {name: '学英语'},
         {name: '看美剧'}
     ],
     skills:[
@@ -32,9 +32,9 @@ module.exports = {
   contact:{
     infos:[
         {text: ['location2','上海']},
-        {text: ['mobile','+86 188 **** ****']},
-        {text: ['envelop','jennifer.chan3@hotmail.com']},
-        {text: ['earth','https://pykm.github.io/Blog/']}
+        {text: ['mobile','+86 1** **** ****']},
+        {text: ['envelop','TakeActionBiz@hotmail.com']},
+        {text: ['earth','http://taxingdong.com/']}
     ]
   },
   projects: [
@@ -80,7 +80,7 @@ module.exports = {
         `使用CoreIDraw绘制主办方要求的图标群`,
         `使用PhotoShop完成页面版式设计`,
         `完成了主屏幕及其他工程页面，并上传至站酷网`],
-        description:`站酷网上的第二届OPPO手机主题大赛，本次比赛虽未获奖，但让大学时的我对设计有了一定理解，而且提供了审美`, 
+        description:`站酷网上的第二届OPPO手机主题大赛，本次比赛虽未获奖，但让大学时的我对设计有了一定理解，而且提高了审美`, 
         url: `http://www.zcool.com.cn/work/ZMzUzNDExNg==.html`
     }
   ],

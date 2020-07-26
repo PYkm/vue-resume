@@ -2,9 +2,9 @@
   <div :id="$t('navs[0].name')" class="Home">
     <!--<a name="Home" href="#Home">Home</a>-->
     <div class="home">
-      <p>Jennifer<br>Chan</p>
+      <p>TakeAction<br>行动</p>
       <h2>{{$t('home.me')}}</h2>
-      <h2>-------------------------</h2>
+      <h2>----------------------------------</h2>
     </div>
   </div>
 </template>
